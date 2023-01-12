@@ -1,8 +1,23 @@
+
+
 body {
     font-style: italic;
     color: aliceblue;
     text-shadow: 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px gold;
     background: url(math.jpg);
+}
+
+#main-titlle{
+    
+    font-size: xx-large;
+
+}
+
+#main-titlle:hover{
+
+    text-shadow: 0 0 10px rgb(230, 185, 71), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
+    border-color: white;
+    color: white;
 }
 
 #main-box{
@@ -142,4 +157,48 @@ span {
 span sup {
     position: absolute;
     left: 0;
+}
+
+#Copyright{
+    margin-top: 30px;
+}
+
+
+@media (max-width:830px){
+
+    #main-box{
+        
+        
+        height: 900px;
+        flex-direction:column;
+
+
+    }
+
+    #form-box{
+
+        width: 300px;
+        margin-right: 10px;
+        margin-left: 50px;
+
+    }
+
+    #exemples{
+        margin-top: 40%;
+        width: 300px;
+        left: 20px;
+        margin-left: 50px;
+        
+    }
+
+    #resultdiv{
+        
+        width: 280px;
+        left: 20px;
+        margin-left: 50px;
+    }
+    
+
+
+    
 }
