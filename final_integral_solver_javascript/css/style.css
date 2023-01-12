@@ -1,0 +1,145 @@
+body {
+    font-style: italic;
+    color: aliceblue;
+    text-shadow: 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px rgba(116, 80, 3, 0.895), 0 0 5px gold;
+    background: url(math.jpg);
+}
+
+#main-box{
+    
+    position: relative;
+    display: flex;
+    width: 900px;
+    height: 480px;
+    padding: 30px;
+    border-radius: 15px;
+    
+}
+
+#form-box{
+
+    margin-left: 100px;
+    background-image: url(math.jpg);
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(50, 41, 17), 0 0 100px rgb(67, 54, 21);
+   
+}
+
+input {
+
+    border-radius: 2px;
+    border-color: rgb(239, 212, 178);
+    background-color: rgb(232, 188, 116);
+}
+input:hover {
+
+    background-color: rgb(247, 227, 176);
+    box-shadow: 0 0 10px rgb(247, 227, 176), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
+    border-color: white;
+    color: rgb(209, 164, 92);
+}
+
+input:focus {
+
+    background-color: rgb(246, 228, 194);
+
+}
+
+input::selection {
+
+    background-color: rgb(237, 199, 104);
+}
+
+::placeholder {
+
+    color: rgb(93, 54, 4);
+}
+
+#resultdiv{
+
+    position: absolute;
+    margin-top: 40%;
+    right: 30%;
+    padding: 20px;
+    border-radius: 15px;
+    width: 400px;
+    box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(50, 41, 17), 0 0 100px rgb(67, 54, 21);
+    background-image: url(math.jpg);
+    
+}
+
+#result-title{
+
+    font-size:x-large;
+    
+}
+
+#result-title:hover{
+   
+    text-shadow: 0 0 10px rgb(230, 185, 71), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
+    border-color: white;
+    color: white;
+
+}
+
+button {
+
+    position: relative;
+    color: rgb(91, 58, 5);
+    border-radius: 10px;
+    border-color: rgb(117, 67, 20);
+    background-color: rgb(230, 171, 83);
+    padding: 5px 30px;
+    transition: 0.2;
+}
+
+button:hover {
+
+    background-color: rgb(247, 227, 176);
+    box-shadow: 0 0 10px rgb(247, 227, 176), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
+    border-color: white;
+    color: rgb(209, 164, 92);
+}
+
+#exemples{
+    
+    position: absolute;
+    right: 150px;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(50, 41, 17), 0 0 100px rgb(67, 54, 21);
+    background-image: url(math.jpg);
+}
+
+#exemples:hover {
+   
+    text-shadow: 0 0 10px rgb(230, 185, 71), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
+    border-color: white;
+    color: rgb(252, 251, 250);
+    
+}
+
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+p.parrExamples {
+    text-align: left;
+}
+
+;
+
+span {
+    position: relative;
+}
+
+span sup {
+    position: absolute;
+    left: 0;
+}
