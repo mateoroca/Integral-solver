@@ -44,10 +44,11 @@ body {
 }
 
 input {
-
+    
     border-radius: 2px;
     border-color: rgb(239, 212, 178);
     background-color: rgb(232, 188, 116);
+    
 }
 input:hover {
 
@@ -60,6 +61,7 @@ input:hover {
 input:focus {
 
     background-color: rgb(246, 228, 194);
+    
 
 }
 
@@ -109,6 +111,7 @@ button {
     background-color: rgb(230, 171, 83);
     padding: 5px 30px;
     transition: 0.2;
+    box-shadow: 10px 10px 40px rgb(0, 0, 0);
 }
 
 button:hover {
@@ -117,6 +120,7 @@ button:hover {
     box-shadow: 0 0 10px rgb(247, 227, 176), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
     border-color: white;
     color: rgb(209, 164, 92);
+    
 }
 
 #exemples{
