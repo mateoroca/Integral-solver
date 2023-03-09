@@ -36,8 +36,8 @@ body {
     margin-left: 100px;
     background-image: url(math.jpg);
     width: 300px;
-    height: 300px;
-    padding: 10px;
+    height: 360px;
+    padding: 5px;
     border-radius: 15px;
     box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(50, 41, 17), 0 0 100px rgb(67, 54, 21);
    
@@ -74,11 +74,13 @@ input::selection {
 
     color: rgb(93, 54, 4);
 }
-
+#sendForm{
+    margin-top: 20px;
+}
 #resultdiv{
 
     position: absolute;
-    margin-top: 40%;
+    margin-top: 43%;
     right: 30%;
     padding: 20px;
     border-radius: 15px;
@@ -93,7 +95,9 @@ input::selection {
     font-size:x-large;
     
 }
-
+#resultArea{
+    font-size:xx-large;
+}
 #result-title:hover{
    
     text-shadow: 0 0 10px rgb(230, 185, 71), 0 0 20px rgb(247, 227, 176), 0 0 80px rgb(247, 227, 176);
@@ -128,8 +132,8 @@ button:hover {
     position: absolute;
     right: 150px;
     width: 300px;
-    height: 300px;
-    padding: 10px;
+    height: 360px;
+    padding: 5px;
     border-radius: 15px;
     box-shadow: 0 0 40px rgb(0, 0, 0), 0 0 60px rgb(50, 41, 17), 0 0 100px rgb(67, 54, 21);
     background-image: url(math.jpg);
@@ -141,6 +145,10 @@ button:hover {
     border-color: white;
     color: rgb(252, 251, 250);
     
+}
+
+#secondtitle{
+    font-size: small;
 }
 
 li {
@@ -200,9 +208,5 @@ span sup {
         width: 280px;
         left: 20px;
         margin-left: 50px;
-    }
-    
-
-
-    
+    }   
 }

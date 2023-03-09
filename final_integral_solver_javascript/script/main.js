@@ -8,11 +8,13 @@
 */
 const limitA 	 = document.getElementById("limitA");
 const limitB 	 = document.getElementById("limitB");
+const step 	     = document.getElementById("stepSize");
 const expression = document.getElementById("expression");
 const buttonForm = document.getElementById("sendForm");
 
-function trapezoidRule(h1, h2, length) {
-	return ((h1 + h2) / 2) * length;
+function trapezoidRule( h1, h2, length ) {
+	var result = (( ( h1 + h2 ) / 2 ) * length );
+	return (result < 0 ) ? result *= -1 : result;
 }
 
 function evaluateEquation( x, equation ) {
@@ -29,8 +31,12 @@ const parseExpression = function( anExpression ) {
 	return equation;
 }
 
+function isNegative( area ) {
+	return area < 0;
+}
+
 function integrate( from, to, equation, stepSize ) {
-	var area = 0;
+	var area = 0.0;
 	for ( var i = from * 1.0 ; i < to; i += stepSize ) {
 		var h1 = evaluateEquation( i, equation );
 		var h2 = evaluateEquation( i + stepSize, equation );
@@ -39,40 +45,33 @@ function integrate( from, to, equation, stepSize ) {
 	return area;
 }
 
-let counter = 0;
-
 function displayResult( limA, limB, equation, result ) {
-	if(counter != 0)
-	{
-		const element = document.getElementById("callableDiv");
-		element.remove();
-	}
+	let tmplimA = limA.value.replaceAll('/360*2*Math.PI', 'degrees');
+	let tmpLimB = limB.value.replaceAll('/360*2*Math.PI', 'degrees');
 	document.getElementById("result")
 		.innerHTML = 
 			`<div id="resultdiv">
 				<i id="result-title">Resultado</i>
-					<p>Resultado: &#x222b;
-						<span>
-							<sup>${limB}</sup>
-							<sub>${limA}</sub>
-						</span>
-					<i>(${equation})dx = </i>${result} </p>
+					<p>Resultado: desde ${tmplimA} hasta ${tmpLimB}: &#x222b;
+						<i>(${equation})dx = </i> <i id = "resultArea">${result} </i></p> 
 			</div>`;
-					/* &#x222b is the html code for the Integral */
-
-	counter = counter + 1;
+			/* &#x222b is the html code for the Integral */
 }
 
 buttonForm.addEventListener("click", () => {
 	
-    const limA = limitA.value.replaceAll("pi", "Math.PI");
-	const limB = limitB.value.replaceAll("pi", "Math.PI");
+    const limA = limitA.value.replaceAll("pi", "Math.PI")
+		.replace("°", "/360*2*Math.PI");
+	const limB = limitB.value.replaceAll("pi", "Math.PI")
+		.replace("°", "/360*2*Math.PI");
     
-    let equation = parseExpression( expression );
+    const stepOfIteration = step.value;
+	
+	let equation = parseExpression( expression );
 
-    const result = integrate( limA, limB, equation, 0.001 );
+    const result = integrate( eval(limA), eval(limB), equation, parseFloat(stepOfIteration) );
 
-	displayResult( limA, limB, expression.value, result );
+	displayResult( limitA, limitB, expression.value, result );
 
 });
 
